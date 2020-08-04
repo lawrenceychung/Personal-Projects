@@ -1,0 +1,35 @@
+import random
+from pynput.keyboard import Key, Controller
+import pyautogui
+
+first_intro = "Hey"
+second_intro = "What's up"
+third_intro = "Heyo"
+
+first_body = "Keep up the great work bro! :)"
+second_body = "Love the vids, keep doing your thing :) "
+third_body = "Great video man! Keep up the great work :)"
+
+outro = " - from your fellow Valorant youtuber!"
+
+name = input ("Enter name")
+custom_comment = input ("Enter your custom comment")
+
+randomizer = random.randint(1,3)
+randomizer_2 = random.randint (1,3)
+
+if randomizer == 1:
+    print (first_intro + " " + name + "!")
+elif randomizer == 2:
+    print (second_intro + " " + name + "!")
+else:
+    print (third_intro + " " + name + "!")
+
+if randomizer_2 == 1:
+    print (first_body + custom_comment)
+elif randomizer_2 == 2:
+    print (second_body + custom_comment)
+else:
+    print (third_body + custom_comment)
+
+print (outro)
